@@ -9,6 +9,9 @@ export default Ember.Component.extend({
       if(confirm('Are you sure?')) {
         this.sendAction('destroyStrain', strain);
       }
-    }
+    },
+    updateStrain(strain, params) {
+      this.sendAction('updateStrain', strain, params);
+    },
   }
 });

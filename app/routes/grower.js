@@ -8,7 +8,6 @@ export default Ember.Route.extend({
     saveStrain(params) {
       var newStrain = this.store.createRecord('strain', params);
       var grower = params.grower;
-      debugger;
       grower.get('strains').addObject(newStrain);
       newStrain.save().then(function() {
         return grower.save();
@@ -19,5 +18,14 @@ export default Ember.Route.extend({
       strain.destroyRecord();
       this.transitionTo('grower');
     },
+    updateStrain(strain, params) {
+      Object.keys(params).forEach(function(key) {
+        if (params[key]!==undefined) {
+          strain.set(key, params[key]);
+        }
+      });
+      strain.save();
+      this.transitionTo('index');
+    }
   }
 });
