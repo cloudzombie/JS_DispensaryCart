@@ -14,6 +14,10 @@ export default Ember.Route.extend({
         return grower.save();
       });
       this.transitionTo('grower', params.grower);
-    }
+    },
+    destroyStrain(strain) {
+      strain.destroyRecord();
+      this.transitionTo('grower');
+    },
   }
 });

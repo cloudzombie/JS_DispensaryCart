@@ -5,6 +5,7 @@
 
 {{#each grower.strains as |strain|}}
 {{strain-tile strain=strain}}
+<button {{action 'destroyStrain' strain}}>Delete Strain</button>
 <hr>
 {{/each}}
 <!-- {{#each model.strains as |strain|}}

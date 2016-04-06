@@ -4,6 +4,11 @@ export default Ember.Component.extend({
   actions: {
     saveStrain(params){
       this.sendAction('saveStrain', params);
+    },
+    destroyStrain(strain) {
+      if(confirm('Are you sure?')) {
+        this.sendAction('destroyStrain', strain);
+      }
     }
   }
 });
