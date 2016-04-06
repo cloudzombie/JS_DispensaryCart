@@ -1,1 +1,12 @@
-{{outlet}}
+
+<ul>
+{{#each model.growers as |grower|}}
+  <li>{{grower.name}}</li>
+{{/each}}
+</ul>
+
+<ul>
+{{#each model.strains as |strain|}}
+  <li>{{strain.name}}</li>
+{{/each}}
+</ul>

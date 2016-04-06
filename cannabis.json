@@ -1,0 +1,37 @@
+{
+  "growers": [{
+    "name": "Green Thummer's Ganj",
+    "location": "Ashland, OR",
+    "grow": "outdoor"
+    }, {
+    "name": "Headbuzz Heavanly",
+    "location": "Portland, OR",
+    "grow": "indoor"
+    }, {
+    "name": "Oregon's Organic Greenhouse",
+    "location": "Bend, OR",
+    "grow": "indoor"
+    }],
+  "strains": [{
+    "name": "OG Kush",
+    "type": "Hybrid",
+    "thc":"25%",
+    "cbd": "2%",
+    "image":"http://www.thecannabist.co/wp-content/uploads/2015/01/og-kush-ccf-4-800x533.jpg",
+    "grower": "Headbuss Heavenly"
+    }, {
+    "name": "Afghani",
+    "type": "Indica",
+    "thc":"27%",
+    "cbd": "1%",
+    "image":"http://cannacentral.com/thumbs/1024x600/wp-content/files_mf/1288793376_magicfields_Picture_1_1.jpg",
+    "grower": "Oregon's Organic Greenhouse"
+    }, {
+    "name": "Strawberry Blue",
+    "type": "Sativa",
+    "thc":"22%",
+    "cbd": "4%",
+    "image":"https://res.cloudinary.com/hzr24uaww/image/upload/s--EsaeOuzO--/c_limit,h_600,w_800/v1439713590/feature/flower/eastern-mass-caregivers-2/26436/strawberry-blue.jpg",
+    "grower": "Green Thummer's Ganj"
+    }]
+}
