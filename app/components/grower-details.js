@@ -1,7 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  sortBy: ['type:desc'],
-  growerStrains: Ember.computed.sort('grower.strains', 'sortBy'),
-
+  actions: {
+    saveStrain(params){
+      this.sendAction('saveStrain', params);
+    }
+  }
 });

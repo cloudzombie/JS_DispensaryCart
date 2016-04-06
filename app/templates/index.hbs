@@ -2,6 +2,7 @@
 <ul>
 {{#each model.growers as |grower|}}
   {{grower-tile grower=grower destroyGrower="destroyGrower"}}
+  {{update-grower updateGrower="updateGrower" grower=grower}}
 {{/each}}
 </ul>
 

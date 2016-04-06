@@ -3,12 +3,10 @@
 <li>{{grower.name}}</li>
 <li>{{grower.location}}</li>
 
-{{#each growerStrains as |strain|}}
-{{strain.name}}
-{{strain.type}}
-{{strain.thc}}
-{{strain.cbd}}
-{{strain.image}}
-{{strain.grower}}
+{{#each grower.strains as |strain|}}
+{{strain-tile strain=strain}}
 <hr>
 {{/each}}
+<!-- {{#each model.strains as |strain|}}
+<li>hello</li>
+{{/each}} -->

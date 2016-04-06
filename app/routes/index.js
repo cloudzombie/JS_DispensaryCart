@@ -17,6 +17,15 @@ export default Ember.Route.extend({
     destroyGrower(grower) {
       grower.destroyRecord();
       this.transitionTo('index');
+    },
+    updateGrower(grower, params) {
+      Object.keys(params).forEach(function(key) {
+        if (params[key]!==undefined) {
+          grower.set(key, params[key]);
+        }
+      });
+      grower.save();
+      this.transitionTo('index');
     }
   }
 });
