@@ -1,0 +1,22 @@
+{{#if growerFormShow}}
+<h2>New Grower Form:</h2>
+<div>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        {{input value=name id="name"}}
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        {{input value=location id="location"}}
+      </div>
+      <div class="form-group">
+        <label for="grow">Grow</label>
+        {{input value=grow id="grow"}}
+      </div>
+      <button class="btn btn-primary"{{action "save"}}>Save</button>
+    </form>
+  </div>
+  {{else}}
+  <button class="btn btn-success btn-xl"{{action 'growerFormReveal'}}>Add New Grower</button>
+  {{/if}}

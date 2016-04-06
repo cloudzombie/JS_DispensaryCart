@@ -6,5 +6,17 @@ export default Ember.Route.extend({
       strains: this.store.findAll('strain'),
       growers:  this.store.findAll('grower')
     });
+  },
+  actions: {
+    saveGrower(params) {
+      var newGrower = this.store.createRecord('grower', params);
+      newGrower.save();
+      this.transitionTo('index');
+    },
+
+    destroyGrower(grower) {
+      grower.destroyRecord();
+      this.transitionTo('index');
+    }
   }
 });

@@ -1,12 +1,14 @@
 
 <ul>
 {{#each model.growers as |grower|}}
-  <li>{{grower.name}}</li>
+  {{grower-tile grower=grower destroyGrower="destroyGrower"}}
 {{/each}}
 </ul>
 
+{{new-grower saveGrower="saveGrower"}}
+
 <ul>
-{{#each model.strains as |strain|}}
-  <li>{{strain.name}}</li>
-{{/each}}
+  {{#each model.strains as |strain|}}
+  {{strain-tile strain=strain}}
+  {{/each}}
 </ul>

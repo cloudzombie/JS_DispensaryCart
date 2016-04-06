@@ -1,0 +1,14 @@
+{{yield}}
+<h4>Strains Grown By</h4>
+<li>{{grower.name}}</li>
+<li>{{grower.location}}</li>
+
+{{#each growerStrains as |strain|}}
+{{strain.name}}
+{{strain.type}}
+{{strain.thc}}
+{{strain.cbd}}
+{{strain.image}}
+{{strain.grower}}
+<hr>
+{{/each}}
