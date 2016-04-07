@@ -4,7 +4,7 @@ export default Ember.Service.extend({
   cartTotal: Ember.computed('items.[]', function() {
     var total = 0;
     for (var i = 0; i < this.get("items.length"); i++) {
-      total+= this.get("items")[i].get("price");
+      total+= parseInt(this.get("items")[i].get("price"));
     }
     return total;
   }),

@@ -1,6 +1,7 @@
 <h3>Shopping Cart:</h3>
 {{#each shoppingCart.items as |item|}}
-  <li>{{item.name}} -- ${{item.price}}</li>
-  <button {{action 'removeFromCart' item}}>remove</button>
+  <li><button class="btn btn-primary btn-xs" {{action 'removeFromCart' item}}><span class="glyphicon glyphicon-minus"></span></button>
+    {{item.name}} -${{item.price}}
+</li>
 {{/each}}
 <p>Total: ${{shoppingCart.cartTotal}}</p>

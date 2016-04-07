@@ -11,8 +11,9 @@
 <h2>Strains Available:</h2>
 <ul>
   {{#each model.strains as |strain|}}
-  <li>{{#link-to 'strain' strain.id}}{{strain.name}}{{/link-to}} - {{strain.type}} -THC- {{strain.thc}}% -CBD- {{strain.cbd}}% --Price: ${{strain.price}} </li>
-  <button {{action 'addToCart' strain}}>Add To CannCart</button>
+  <li>
+  <button class="btn btn-success btn-xs" {{action 'addToCart' strain}}><span class="glyphicon glyphicon-plus"></span></button>
+  {{#link-to 'strain' strain.id}}{{strain.name}}{{/link-to}} - {{strain.type}} -THC- {{strain.thc}}% -CBD- {{strain.cbd}}% --Price: ${{strain.price}}</li>
   {{/each}}
 </ul>
 
