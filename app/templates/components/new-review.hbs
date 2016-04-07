@@ -1,0 +1,15 @@
+
+{{#if addNewReveiw}}
+<h1>Give {{grower.name}} a review</h1>
+<div>
+  <form>
+    <div class="form-group">
+      <label for="review">Review:</label>
+      {{textarea value=review id="review"}}
+    </div>
+    <button {{action 'saveReview'}}>Rate!</button>
+  </form>
+</div>
+{{else}}
+<button {{action 'growerReviewShow'}}>Rate Grower</button>
+{{/if}}

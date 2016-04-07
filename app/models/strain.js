@@ -7,5 +7,6 @@ export default DS.Model.extend({
   cbd: DS.attr(),
   image: DS.attr(),
   price: DS.attr(),
+  reviews: DS.attr('reviews', {async: true}),
   grower: DS.belongsTo('grower', {async: true})
 });
