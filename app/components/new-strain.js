@@ -14,7 +14,7 @@ export default Ember.Component.extend({
         type: this.get('type') ? this.get('type') : "Default Type",
         thc: this.get('thc') ? this.get('thc') : "Default THC",
         cbd: this.get('cbd') ? this.get('cbd') : "Default CBD",
-        price: this.get('price') ? this.get('price') : "Default Price",
+        price: parseInt(this.get('price')) ? this.get('price') : 0,
         image: this.get('image') ? this.get('image') : "http://www.memepile.com/pics/3963-o.jpg",
         grower: this.get('grower') ? this.get('grower'):""
       };

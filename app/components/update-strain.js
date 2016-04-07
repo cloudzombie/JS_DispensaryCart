@@ -12,7 +12,7 @@ export default Ember.Component.extend({
         type: this.get('type'),
         thc: this.get('thc'),
         cbd: this.get('cbd'),
-        price: this.get('price'),
+        price: parseInt(this.get('price')),
         image: this.get('image'),
       };
       this.set('updateStrainForm', false);
