@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  shoppingCart: Ember.inject.service(),
   model() {
     return Ember.RSVP.hash({
       strains: this.store.findAll('strain'),
@@ -26,6 +27,10 @@ export default Ember.Route.extend({
       });
       grower.save();
       this.transitionTo('index');
+    },
+
+    addToCart(item) {
+      this.get('shoppingCart').add(item);
     }
   }
 });

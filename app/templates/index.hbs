@@ -1,4 +1,4 @@
-
+<h2>Growers:</h2>
 <ul>
 {{#each model.growers as |grower|}}
   {{grower-tile grower=grower destroyGrower="destroyGrower"}}
@@ -8,8 +8,11 @@
 
 {{new-grower saveGrower="saveGrower"}}
 
+<h2>Strains Available:</h2>
 <ul>
   {{#each model.strains as |strain|}}
-  {{strain-tile strain=strain}}
+<li>{{#link-to 'strain' strain.id}}{{strain.name}}{{/link-to}} - {{strain.type}} -THC- {{strain.thc}}% -CBD- {{strain.cbd}}% --Price: ${{strain.price}} </li> <button {{action 'addToCart' strain}}>Add To CannCart</button>
   {{/each}}
 </ul>
+
+{{display-cart}}

@@ -10,11 +10,12 @@ export default Ember.Component.extend({
     },
     saveStrain() {
       var params = {
-        name: this.get('name') ? this.get('name') : "Default String",
-        type: this.get('type') ? this.get('type') : "default string",
-        thc: this.get('thc') ? this.get('thc') : "default string",
-        cbd: this.get('cbd') ? this.get('cbd') : "default string",
-        image: this.get('image') ? this.get('image') : "default string",
+        name: this.get('name') ? this.get('name') : "Default Name",
+        type: this.get('type') ? this.get('type') : "Default Type",
+        thc: this.get('thc') ? this.get('thc') : "Default THC",
+        cbd: this.get('cbd') ? this.get('cbd') : "Default CBD",
+        price: this.get('price') ? this.get('price') : "Default Price",
+        image: this.get('image') ? this.get('image') : "http://www.memepile.com/pics/3963-o.jpg",
         grower: this.get('grower') ? this.get('grower'):""
       };
       this.set('addNewStrain', false);
