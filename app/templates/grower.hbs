@@ -1,6 +1,8 @@
 {{outlet}}
 {{grower-details grower=model destroyStrain="destroyStrain" updateStrain="updateStrain" strain=strain}}
 {{new-strain saveStrain="saveStrain" grower=model}}
-{{new-review grower=model sendReview="saveReview"}}
+{{new-review grower=model sendReview="sendReview"}}
+{{review-tile review=review}}
+<h4>{{review.name}}</h4>
 
 <!-- {{strain-tile strain=strain}} -->

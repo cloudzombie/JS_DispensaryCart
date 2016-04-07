@@ -1,8 +1,13 @@
 {{yield}}
-<h3>Strains Grown By: {{grower.name}} in {{grower.location}}, {{grower.grow}}</h3>
+<h3>Strains Available: {{grower.name}} in {{grower.location}}, {{grower.grow}}</h3>
 <hr>
 
 {{#each grower.strains as |strain|}}
 {{strain-tile strain=strain destroyStrain="destroyStrain"}}
 {{update-strain updateStrain="updateStrain"  strain=strain }}<hr>
+{{/each}}
+
+<h3>Reviews:</h3>
+{{#each grower.reviews as |review|}}
+{{review-tile review=review}}
 {{/each}}

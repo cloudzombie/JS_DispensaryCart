@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   addNewStrain: false,
   sortBy: ['date:desc'],
-  growerStrains: Ember.computed.sort('grower.strains', 'sortBy'),
+  growerReviews: Ember.computed.sort('grower.reviews', 'sortBy'),
   actions: {
     strainFormShow() {
       this.set('addNewStrain', true);

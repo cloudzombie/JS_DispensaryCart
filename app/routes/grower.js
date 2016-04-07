@@ -26,6 +26,15 @@ export default Ember.Route.extend({
       });
       strain.save();
       this.transitionTo('index');
+    },
+    sendReview(params) {
+      var newReview= this.store.createRecord('review', params);
+      var grower = params.grower;
+      grower.get('reviews').addObject(newReview);
+      newReview.save().then(function(){
+        return grower.save();
+      });
+      this.transitionTo('grower', params.grower);
     }
   }
 });
