@@ -1,7 +1,6 @@
 # Cannabis-cart
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+An Ember app that allows a user to add a grower and they are able to rate the grower.  Also a user can add a strain and they have to specify which grower the strain was grown by.
 
 ## Prerequisites
 
